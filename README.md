@@ -75,15 +75,22 @@ To proceed with the installation, let's navigate to the installation folders. Fi
 Within PHP Manager, proceed to enable three specific extensions: php_imap.dll, php_intl.dll, and php_opcache.dll. Once these extensions are enabled, reload IIS Manager to ensure the changes take effect. Now, navigate to "Sites > Default > osTickets" in IIS Manager. On the right side of the interface, click on "Browse *:80" to effortlessly open the osTicket web-interface. By following these instructions, you will successfully enable the necessary extensions and gain access to the osTicket web-interface through IIS Manager.
 
 </p>
+<img src="https://i.imgur.com/fLBjpG4.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
+<p>
+To enable additional extensions in IIS Manager, you can follow these steps. First, navigate to Sites -> Default -> osTicket in the IIS Manager interface. Once you've reached the osTicket site, double-click on PHP Manager. This will open the PHP Manager window. From there, click on the "Disable or enable an extension" option. In the list of extensions, locate and enable "php_intl.dll" and "php_opcache.dll". After enabling these extensions, don't forget to refresh the osTicket webserver to apply the changes. Take a moment to observe the changes, ensuring that the "Intl Extension" is now successfully enabled. By following these steps, you will be able to enable the specified extensions and witness the desired changes in the osTicket webserver.
+
+</p>
 <img src="https://i.imgur.com/0lBLso9.png "60%" width="60%" alt="Disk Sanitization Steps"/>
 
-<p> By following the aforementioned steps, your setup should resemble somthing like this.
+<p> By following the aforementioned steps, your setup should resemble somthing like the image above.
 
                                                                                        
 
 </p>
-<img src="https://i.imgur.com/fLBjpG4.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 <p>
+Alright, let's step back and return to the directory "c:\inetpub\wwwroot\osticket\include". In this location, locate the file named "ost-sampleconfig.php". We will proceed to rename it to "ost-config.php". Once the renaming is complete, right-click on the "ost-config.php" file and open its properties. Under the "Security" tab, disable inheritance. Then, remove all newly added permissions and grant permissions to everyone.
 </p>
 <p>
 Next download osTicket. Then extract and copy the "upload" folder into c:\inetpub\wwwroot. Afterwards rename the folder to osTicket
@@ -94,7 +101,7 @@ Next download osTicket. Then extract and copy the "upload" folder into c:\inetpu
 <p>
 </p>
 <p>
-Open IIS Manager and restart the server. Once inside IIS manager go to Sites->Default->osTicket on the right, click "Browse*.80" from there your default browser should open osTicket webserver.
+After completing the previous steps, proceed to set up osTicket in your browser. Click on the "Continue" button to proceed. You will be prompted to provide a name for your Helpdesk, so choose a name that suits your preference. Additionally, select a default email address that will receive emails from customers who submit tickets. This email address will serve as the point of contact for customer inquiries.
 </p>
 <img src="https://i.imgur.com/F2aCjWX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -109,7 +116,7 @@ Then double click on PHP manager. Click on "Disable or enable an extension" Enab
 <p>
 </p>
 <p>
-In clonclusion 
+In clonclusion with the completion of the osTicket setup, it is expected that osTicket is now up and running smoothly.Now, let's move on to the next assignment: post-installation configuration.
  
  
  
