@@ -47,17 +47,18 @@ To begin, our first step will be to create a Virtual Machine through the Microso
 <p>
 </p>
 <p>
-Next, you can easily connect to your newly created VM by using Remote Desktop Protocol (RDP) and the public IPv4 address associated with it.
+<p>
+Once you are connected to your VM, you need to enable Internet Information Services (IIS). To do this, follow these steps: access the Control Panel, select "Uninstall a program," then choose "Turn Windows features on or off" on the left-hand side. A list will appear, and you can enable Internet Information Services from there.
 </p>  
 <img src="https://i.imgur.com/SdlRwfh.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 </p>
 <p>
-Once you are connected to your VM, you need to enable Internet Information Services (IIS). To do this, follow these steps: access the Control Panel, select "Uninstall a program," then choose "Turn Windows features on or off" on the left-hand side. A list will appear, and you can enable Internet Information Services from there.
+
 
  </p>
- <img src=https://i.imgur.com/lIAW8i0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+ <img src="https://i.imgur.com/eJ1MzcR.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 <p>
 Now that IIS is enabled, the next step is to install the Web Platform Installer. To download the necessary files for setting up osTicket, you can access the provided link: https://drive.google.com/drive/u/0/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6. Simply click on the link and proceed to install the Web Platform Installer from there. This installer will provide you with all the required materials to get osTicket up and running smoothly.
 
@@ -90,10 +91,12 @@ To enable additional extensions in IIS Manager, you can follow these steps. Firs
 </p>
 
 <p>
-Alright, let's step back and return to the directory "c:\inetpub\wwwroot\osticket\include". In this location, locate the file named "ost-sampleconfig.php". We will proceed to rename it to "ost-config.php". Once the renaming is complete, right-click on the "ost-config.php" file and open its properties. Under the "Security" tab, disable inheritance. Then, remove all newly added permissions and grant permissions to everyone.
+To complete the task, navigate to the directory C:\inetpub\wwwroot\osTicket\include\ and locate the file named ost-sampleconfig.php. Rename this file to ost-config.php. Next, right-click on ost-config.php and select "Properties." In the Properties window, go to the "Security" tab and click on the "Edit" button. From the list of group or user names, choose "Everyone" and grant "Full control" permissions. Apply the changes and disable inheritance, removing any existing permissions inherited from the parent folder. These steps will successfully rename the file, assign necessary permissions, and disable inheritance for ost-config.php.
+
+
 </p>
 <p>
-Next download osTicket. Then extract and copy the "upload" folder into c:\inetpub\wwwroot. Afterwards rename the folder to osTicket
+
 </P>
 <img src="https://i.imgur.com/9TEYn0N.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -108,15 +111,13 @@ After completing the previous steps, proceed to set up osTicket in your browser.
 <p>
 </p>
 <p>
-Go back into IIS manager and enable some extensions. To do this you have to go to Sites->Default->osTicket
-Then double click on PHP manager. Click on "Disable or enable an extension" Enable "php_intl.dll" & "php_opcache.dll" then refresh the osTicket webserver and obsereve the changes "Intl Extension" should now be enabled. 
 
  <img src="https://i.imgur.com/MnCmrTq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <p>
 </p>
 <p>
-In clonclusion with the completion of the osTicket setup, it is expected that osTicket is now up and running smoothly.Now, let's move on to the next assignment: post-installation configuration.
+With the successful completion of the osTicket setup, you can now expect osTicket to be fully operational and running smoothly. Congratulations on reaching this milestone! Now, let's proceed to the next task: post-installation configuration.
  
  
  
